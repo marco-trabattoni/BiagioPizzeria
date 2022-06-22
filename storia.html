@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="stile.css">
+</head>
+<body>
+
+<div id="whitecover">
+</div>
+
+
+
+<div id="vidazione">
+  <div id="vid">
+    <img src="Loop1.gif" style="width:180px; height:180px;">
+  </div>
+</div>
+
+
+
+  <div class="menu">
+    <span onclick="transitionToPage('storia.html')" class="option left">La nostra storia</span>
+    <span onclick="transitionToPage('menu.html')" class="option">Le Pizze</span>
+
+  <div class="LOGOC" onclick="transitionToPage('index.html')">
+      <img src="LOGO.png" class="LOGO">
+    </div>
+
+    <div id="bottone" class="option right">Contatti</div>
+  </div>
+
+
+  <div id="contatti" class="contatti">
+    <div id="cont" class="cont">
+    <div class="info">
+  <div class="rosso">Dove siamo</div>
+  Via V. Monti, 28 - 20123 Milano
+  <br><br><br>
+
+  <div class="rosso">Chiamaci</div>
+  02 4987166
+    </div>
+
+    <div class="info2">
+    Prenotazione solo a pranzo<br>
+    Chiuso il Sabato
+    </div>
+    </div>
+  </div>
+
+
+<!--
+<div class="content">
+
+<div class="title">
+  "Una piccola Napoli a Milano"
+</div>
+
+<div class="text">
+  Il locale “Pizzeria Biagio” apre i battenti il 7 gennaio 1978 ad opera di Biagio Iannone, nato a Palma Campania (NA) nel 1929, con l’ausilio di sua moglie Antonietta Esposito e con in suoi primi due figli Giampaolo Antonio e Assunta Maria.
+Il locale cucina pizze con forno a legna fin dall’apertura, nei primi anni a questo affiancava anche la cottura di carni alla griglia ma poi è stata interrotta.
+Biagio ha continuato ininterrottamente la gestione del locale fino al 1999.
+Le redini della società sono quindi passate ai due figli: Sandro e Nando che continuano tutt’ora ad occuparsi del locale.
+  </div>
+
+<div class="storia">
+  <img src="biagio1.jpg" class="imma">
+  <img src="biagio2.jpg" class="imma">
+  <img src="BIAGIOsr.jpg" class="imma">
+  <img src="SANDO.jpeg" class="imma">
+</div>
+</div>
+-->
+
+
+
+<div class="relative">
+
+<div class="background">
+    <img src="SANDOBW.jpg" class="pizza">
+
+    <div class="layer">
+    </div>
+<div class="pacchetto">
+    <div class="title" onclick="miafunzione()">
+      "Una piccola Napoli a Milano"
+    </div>
+
+    <div class="text2">
+      Il locale “Pizzeria Biagio” apre i battenti il 7 gennaio 1978 ad opera di Biagio Iannone, nato a Palma Campania (NA) nel 1929, con l’ausilio di sua moglie Antonietta Esposito e con in suoi primi due figli Giampaolo Antonio e Assunta Maria.
+      Il locale cucina pizze con forno a legna fin dall’apertura, nei primi anni a questo affiancava anche la cottura di carni alla griglia ma poi è stata interrotta.
+      Biagio ha continuato ininterrottamente la gestione del locale fino al 1999.
+      Le redini della società sono quindi passate ai due figli: Sandro e Nando che continuano tutt’ora ad occuparsi del locale.
+    </div>
+</div>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+window.transitionToPage = function(href) {
+    var x = document.getElementById("whitecover");
+    x.style.width = "100vw";
+          setTimeout(function() {
+              window.location.href = href
+          }, 1000)
+}
+
+</script>
+
+
+<script>
+document.getElementById("bottone").addEventListener("click", myFunction);
+
+function myFunction() {
+   var element = document.getElementById("contatti");
+   element.classList.toggle("largo");
+   document.getElementById("cont").classList.toggle("zero");
+
+}
+</script>
+
+
+
+<script>
+setTimeout(function () {
+  document.getElementById("vid").style.opacity = "1";
+
+}, 0)
+
+setTimeout(function () {
+  document.getElementById("vid").style.opacity = "0";
+
+}, 2000)
+
+setTimeout(function () {
+  document.getElementById("vidazione").style.width = "0%";
+
+}, 2000)
+</script>
+
+</body>
+</html>
