@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="stile.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+  <div id="whitecover">
+  </div>
+
+  <div id="citazione">
+    <div id="cit">
+      “Fatte ‘na pizza c’a pummarola ‘ncoppa, vedrai che il mondo poi ti sorriderà”.
+    </div>
+    <div id="under">
+      Pino Daniele
+    </div>
+  </div>
+
+
+<div class="menu">
+    <span onclick="transitionToPage('storia.html')" class="option left">La nostra storia</span>
+  <span onclick="transitionToPage('menu.html')" class="option">Le Pizze</span>
+
+  <div class="LOGOC" onclick="transitionToPage('index.html')">
+    <img src="LOGO.png" class="LOGO" onclick="miafunzione()">
+  </div>
+
+  <div id="bottone" class="option right">Contatti</div>
+</div>
+
+<div id="contatti" class="contatti">
+  <div id="cont" class="cont">
+  <div class="info">
+<div class="rosso">Dove siamo</div>
+Via V. Monti, 28 - 20123 Milano
+<br><br><br>
+
+<div class="rosso">Chiamaci</div>
+02 4987166
+  </div>
+
+  <div class="info2">
+  Prenotazione solo a pranzo<br>
+  Chiuso il Sabato
+  </div>
+  </div>
+</div>
+
+
+
+<div class="videoscat">
+<video muted loop id="myVideo">
+  <source src="Biagio2.mov" type="video/mp4">
+
+</video>
+<div class="audio" onclick="enableMute()">
+Sound
+</div>
+
+</div>
+
+
+
+
+
+
+
+<script>
+
+window.transitionToPage = function(href) {
+    var x = document.getElementById("whitecover");
+    x.style.width = "100vw";
+          setTimeout(function() {
+              window.location.href = href
+          }, 1000)
+}
+
+</script>
+
+
+<script>
+setTimeout(function () {
+  document.getElementById("cit").style.opacity = "1";
+
+}, 500)
+
+setTimeout(function () {
+  document.getElementById("under").style.opacity = "1";
+
+}, 3000)
+
+setTimeout(function () {
+  document.getElementById("cit").style.opacity = "0";
+  document.getElementById("under").style.opacity = "0";
+
+}, 4500)
+
+setTimeout(function () {
+  document.getElementById("citazione").style.width = "0%";
+
+}, 6000)
+</script>
+
+
+<script>
+document.getElementById("bottone").addEventListener("click", myFunction);
+
+function myFunction() {
+   var element = document.getElementById("contatti");
+   element.classList.toggle("largo");
+   document.getElementById("cont").classList.toggle("zero");
+
+}
+</script>
+
+
+<script>
+var vid = document.getElementById("myVideo");
+
+function enableMute() {
+
+  if (vid.muted === true) {
+  vid.muted = false;
+} else {
+  vid.muted = true;
+}}
+
+vid.addEventListener("canplay", function() {
+  setTimeout(function() {
+    vid.play();
+  }, 5000);
+});
+
+</script>
+
+
+</body>
+</html>
